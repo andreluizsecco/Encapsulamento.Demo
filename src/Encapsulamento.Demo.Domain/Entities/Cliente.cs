@@ -3,7 +3,7 @@ namespace Encapsulamento.Demo.Domain.Entities
     public class Cliente
     {
         public int Codigo { get; private set; }
-        public string Nome { get; set; }
+        public string Nome { get; private set; }
         public DateTime DataCadastro { get; private set; }
         public bool Premium { get; private set; }
         public DateTime? DataPremium { get; private set; }
