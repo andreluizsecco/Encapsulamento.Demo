@@ -17,7 +17,9 @@ namespace Encapsulamento.Demo.Data.Migrations
                     Nome = table.Column<string>(type: "varchar(150)", unicode: false, maxLength: 150, nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Premium = table.Column<bool>(type: "bit", nullable: false),
-                    Ativo = table.Column<bool>(type: "bit", nullable: false)
+                    DataPremium = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Ativo = table.Column<bool>(type: "bit", nullable: false),
+                    MotivoDesativacao = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: true)
                 },
                 constraints: table =>
                 {

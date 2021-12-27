@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Encapsulamento.Demo.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211225142644_Initial")]
+    [Migration("20211227012807_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,14 @@ namespace Encapsulamento.Demo.Data.Migrations
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DataPremium")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MotivoDesativacao")
+                        .HasMaxLength(250)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(250)");
 
                     b.Property<string>("Nome")
                         .IsRequired()

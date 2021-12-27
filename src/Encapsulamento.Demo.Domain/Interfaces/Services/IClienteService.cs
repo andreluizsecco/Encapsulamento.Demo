@@ -7,6 +7,6 @@ namespace Encapsulamento.Demo.Domain.Interfaces.Services
         Task<Cliente?> ObterClientePorCodigo(int codigo);
         Task InserirCliente(Cliente cliente);
         Task TornarClientePremium(int codigo);
-        Task DesativarCliente(int codigo);
+        Task DesativarCliente(int codigo, string motivo);
     }
 }

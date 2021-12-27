@@ -33,6 +33,14 @@ namespace Encapsulamento.Demo.Data.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("DataPremium")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MotivoDesativacao")
+                        .HasMaxLength(250)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(250)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)

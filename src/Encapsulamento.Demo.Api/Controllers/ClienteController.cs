@@ -38,10 +38,10 @@ public class ClienteController : ControllerBase
         return Ok();
     }
 
-    [HttpPost("{codigo}/desativar")]
-    public async Task<ActionResult<int>> DesativarCliente(int codigo)
+    [HttpPost("{codigo}/desativar/{motivo}")]
+    public async Task<ActionResult<int>> DesativarCliente(int codigo, string motivo)
     {
-        await _clienteService.DesativarCliente(codigo);
+        await _clienteService.DesativarCliente(codigo, motivo);
         return Ok();
     }
 }

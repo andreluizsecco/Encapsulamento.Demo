@@ -18,6 +18,10 @@ namespace Encapsulamento.Demo.Data.Mappings
             builder.Property(p => p.Nome)
                 .HasMaxLength(150)
                 .IsUnicode(false);
+
+            builder.Property(p => p.MotivoDesativacao)
+                .HasMaxLength(250)
+                .IsUnicode(false);
         }
     }
 }
